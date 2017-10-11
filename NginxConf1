@@ -1,0 +1,60 @@
+[root@localhost ~]# docker exec -it 8e1ac6ddd297 /bin/bash
+root@8e1ac6ddd297:/# cat sites-available/myfirstpage.com.conf 
+ server
+      {
+        
+        listen 80;
+        server_name myfirstpage.com www.myfirstpage.com;
+        
+        location /{
+
+        root /usr/share/nginx/myfirstpage.com/public_html;
+        index index.html index.htm;
+        
+}
+
+
+     }
+root@8e1ac6ddd297:/# 
+
+
+
+
+
+root@8e1ac6ddd297:/# cat sites-available/mysecondpage.com.conf 
+  server {
+           listen 80;
+           server_name mysecondpage.com www.mysecondpage.com;
+
+           location /{
+
+                        root /usr/share/nginx/mysecondpage.com/public_html;
+                        index index.html index.htm;
+
+                       }
+          }
+
+
+
+root@8e1ac6ddd297:/# cat sites-available/mythirdpage.com.conf 
+ server {
+
+       listen 80;
+       server_name mythirdpage.com www.mythirdpage.com;
+    
+       location /{
+
+          root /usr/share/nginx/mythirdpage.com/public_html;
+          index index.html index.htm;
+              }
+
+}
+root@8e1ac6ddd297:/# 
+
+
+
+
+
+
+
+root@8e1ac6ddd297:/#
